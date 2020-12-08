@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Burnout Quiz</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+   
+<style>
+body {
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+padding: 5px;
+height: 120px;
+margin-bottom: 3em;
+}
+
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+.radio-toolbar {
+  margin: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+ display: none;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #eee;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid #b8b8b8;
+    border-radius: 6px;
+}
+
+.radio-toolbar label:hover {
+  background-color: #9e9e9e;
+}
+
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: #3e95cd;
+    border-color: #4c4;
+    color: #ffffff;
+    border: 1px solid #3e7acd;
+}
+
+#grade {
+	display:none;
+}
+
+.radio-toolbar p {
+margin-top: 3em;
+font-size: 18px;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+<div id="main">
+<div id="header">
+<p>Reference: Humanitas Inc all rights reserved</p>
+<h1>PERFORMANCE WARNING INDICATOR</h1>
+<p>Indicate TRUE or FALSE for the following statements to determine potential performance risk.</p>
+
+</div>
+<form id="form1">
+<div class="radio-toolbar">
+<p>Work is increasingly less fun than it used to be.</p>
+<input type="radio" name="one" value="1" id="one_string" /><label for="one_string">True</label>
+<input type="radio" name="one" value="0" id="one_join" /><label for="one_join">False</label>
+
+<p>Worries about your job and security are affecting you</p>
+<input type="radio" name="two" value="1" id="two_string"/><label for="two_string">True</label>
+<input type="radio" name="two" value="0" id="two_join"/><label for="two_join">False</label>
+
+<p>Your mood is more grumpy than usual.</p>
+<input type="radio" name="three" value="1" id="three_string"/><label for="three_string">True</label>
+<input type="radio" name="three" value="0" id="three_join"/><label for="three_join">False</label>
+
+<p>You are having increasing conflict with those you love.</p>
+<input type="radio" name="four" value="1" id="four_string" /><label for="four_string">True</label>
+<input type="radio" name="four" value="0" id="four_join" /><label for="four_join">False</label>
+
+<p>You do not sleep as well as you used to.</p>
+<input type="radio" name="five" value="1" id="five_string" /><label for="five_string">True</label>
+<input type="radio" name="five" value="0" id="five_join" /><label for="five_join">False</label>
+
+<p>You have not been looking after yourself as well as you might.</p>
+<input type="radio" name="six" value="1" id="six_string" /><label for="six_string">True</label>
+<input type="radio" name="six" value="0" id="six_join" /><label for="six_join">False</label>
+
+<p>You are concerned about what you will do if you can no longer work at your job.</p>
+<input type="radio" name="seven" value="1" id="seven_string"/><label for="seven_string">True</label>
+<input type="radio" name="seven" value="0" id="seven_join"/><label for="seven_join">False</label>
+
+<p>You are drinking or smoking or taking more risks than is healthy.</p>
+<input type="radio" name="eight" value="1" id="eight_string"/><label for="eight_string">True</label>
+<input type="radio" name="eight" value="0" id="eight_join"/><label for="eight_join">False</label>
+
+<p>You are drinking or smoking or taking more risks than is healthy.</p>
+<input type="radio" name="nine" value="1" id="nine_string"/><label for="nine_string">True</label>
+<input type="radio" name="nine" value="0" id="nine_join"/><label for="nine_join">False</label>
+
+<p>You are drinking or smoking or taking more risks than is healthy.</p>
+<input type="radio" name="ten" value="1" id="ten_string"/><label for="ten_string">True</label>
+<input type="radio" name="ten" value="0" id="ten_join"/><label for="ten_join">False</label>
+
+<p>How much subjective disturbance or distress do you feel at this point in your life?<br>(1 is neutral and 10 is very distressing)</p>
+<input type="radio" name="eleven" value="1" id="eleven_string" /><label for="eleven_string">1</label>
+<input type="radio" name="eleven" value="2" id="eleven_join" /><label for="eleven_join">2</label>
+<input type="radio" name="eleven" value="3" id="eleven_info" /><label for="eleven_info">3</label>
+<input type="radio" name="eleven" value="4" id="eleven_condition"/><label for="eleven_condition">4</label>
+<input type="radio" name="eleven" value="5" id="eleven_five" /><label for="eleven_five">5</label>
+<input type="radio" name="eleven" value="6" id="eleven_six" /><label for="eleven_six">6</label>
+<input type="radio" name="eleven" value="7" id="eleven_seven" /><label for="eleven_seven">7</label>
+<input type="radio" name="eleven" value="8" id="eleven_eight"/><label for="eleven_eight">8</label>
+<input type="radio" name="eleven" value="9" id="eleven_nine" /><label for="eleven_nine">9</label>
+<input type="radio" name="eleven" value="10" id="eleven_ten" /><label for="eleven_ten">10</label>
+
+</div>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+   
+<p id="grade"></p>
+
+
+<canvas id="myChart" height="100px"></canvas>
+
+<p id="grade2"></p>
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       one = parseInt(document.querySelector('input[name = "one"]:checked').value);
+	   two = parseInt(document.querySelector('input[name = "two"]:checked').value);
+	   three = parseInt(document.querySelector('input[name = "three"]:checked').value);
+	   four = parseInt(document.querySelector('input[name = "four"]:checked').value);
+	   five = parseInt(document.querySelector('input[name = "five"]:checked').value);
+	   six = parseInt(document.querySelector('input[name = "six"]:checked').value);
+	   seven = parseInt(document.querySelector('input[name = "seven"]:checked').value);
+	   eight = parseInt(document.querySelector('input[name = "eight"]:checked').value);
+	   nine = parseInt(document.querySelector('input[name = "nine"]:checked').value);
+	   ten = parseInt(document.querySelector('input[name = "ten"]:checked').value);
+		eleven = parseInt(document.querySelector('input[name = "eleven"]:checked').value);
+		
+		risk = eleven;
+		
+	   
+	   result = (one + two + three + four + five + six + seven + eight + nine +ten)*risk;
+	   
+	document.getElementById("grade").innerHTML = result;
+
+	   if(result <25) {
+document.getElementById("grade2").innerHTML = "SCORE: Low risk";
+}
+
+   if(result >=25 && result <50) {
+document.getElementById("grade2").innerHTML = "SCORE: Some risk";
+}
+
+   if(result >=51 && result <75) {
+document.getElementById("grade2").innerHTML = "SCORE: High risk";
+}
+	
+	if(result >=75) {
+document.getElementById("grade2").innerHTML = "SCORE: Great risk";
+}   
+
+
+  var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['% RISK', '% NO RISK'],
+    datasets: [{
+    label: 'Risk',
+    data: [result, 100-result],
+    backgroundColor: ['#FF0000', '#228b22']
+  }]
+
+  },
+  options: {
+  		responsive: true,
+  		circumference: Math.PI,
+  		rotation: Math.PI,
+  		cutoutPercentage: 35,
+      title: {
+        display: false,
+        text: 'Risk Score',
+      },
+      legend: { display: false },
+     
+     
+    }
+    
+});
+   
+   
+   
+   
+         return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+   
+    </script>
+    
+  
+
+
+
+</div>
+</body>
+</html>
+
